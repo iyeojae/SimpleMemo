@@ -18,11 +18,11 @@
 
 - [x] 환경설정
       
-- [ ] 핵심기능
-  - [ ] 종속성 관리  
-  - [ ] yml과 properties  
-  - [ ] 계층 구조  
-  - [ ] CRUD
+- [x] 핵심기능
+  - [x] 종속성 관리  
+  - [x] yml과 properties  
+  - [x] 계층 구조  
+  - [x] CRUD
      
 - [ ] API 명세서
       
