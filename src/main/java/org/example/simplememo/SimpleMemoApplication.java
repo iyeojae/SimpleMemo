@@ -9,5 +9,4 @@ public class SimpleMemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SimpleMemoApplication.class, args);
 	}
-
 }
