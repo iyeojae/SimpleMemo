@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class MemoService {
     private final MemoRepository memoRepository;
+
     /**
      * 메모 생성
      * @param request 생성할 메모의 내용
