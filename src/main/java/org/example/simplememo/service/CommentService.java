@@ -21,4 +21,15 @@ public class CommentService {
         Comment comment = new Comment(request.getContent(), memo);
         return commentRepository.save(comment);
     }
+
+    public Comment updateComment(Long commentId, CommentRequestDto request) {
+        Comment comment = commentRepository.findById(commentId)
+                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 댓글 아이디: " + commentId));
+        comment.setContent(request.getContent());
+        return commentRepository.save(comment);
+    }
+
+    public  void deleteComment(Long commentId) {
+        commentRepository.deleteById(commentId);
+    }
 }
