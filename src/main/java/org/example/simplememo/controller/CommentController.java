@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/comments")
 public class CommentController {
-    CommentService commentService;
-    @PostMapping()
-    public ResponseEntity<CommonResponse<CommentResponseDto>> postComment(@PathVariable long memoId, @RequestBody CommentRequestDto request) {
         Comment comment = commentService.createComment(memoId, request);
         CommentResponseDto response = new CommentResponseDto(comment);
         return ResponseEntity.ok()
@@ -22,5 +19,4 @@ public class CommentController {
                     .msg("게시글 번호" + memoId + "댓글 생성이 완료되었습니다.")
                     .data(response)
                     .build());
-    };
 }

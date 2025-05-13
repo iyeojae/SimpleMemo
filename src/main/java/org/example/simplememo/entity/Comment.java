@@ -1,11 +1,6 @@
 package org.example.simplememo.entity;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
 @Getter
@@ -22,7 +17,6 @@ public class Comment {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "memo_id", nullable = false)
     private Memo memo;
-
 
     @Builder
     public Comment(String content, Memo memo) {
