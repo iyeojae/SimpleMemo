@@ -19,6 +19,7 @@ public class CommentService {
         Memo memo = memoRepository.findById(memoId)
                 .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 메모 아이디: " + memoId));
         Comment comment = new Comment(request.getContent(), memo);
+
         return commentRepository.save(comment);
     }
 

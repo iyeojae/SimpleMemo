@@ -12,7 +12,7 @@ import lombok.Setter;
 @RequiredArgsConstructor
 public class Memo {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "memo_id", nullable = false)
     private Long memoId;
 
